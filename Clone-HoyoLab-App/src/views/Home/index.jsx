@@ -1,4 +1,6 @@
 import { ScrollView, StyleSheet, Text, View, Image } from 'react-native'
+import { CardPost } from '../../components/CardPost';
+import { Carrousel } from '../../components/Carousel';
 
 export const Home = () => {
     return(
@@ -11,12 +13,17 @@ export const Home = () => {
                  style={{ width: 30, height: 30}}/>
             </View>
             <ScrollView style={styles.scrollView}>
+                {/* <Carrousel/> */}
             <View style={styles.containerCaroussel}>
-            <Text style={styles.viewBarFont}>Eventos</Text>
+                <Carrousel/>
             </View>
+            <CardPost titulo="Apenas" nome="Hu Tao"/>
+            <CardPost  titulo="suibaka"  />
+            <CardPost/>
+            <CardPost/>
             </ScrollView>
             <View style={styles.barraNavegacao}>
-                <Text style={styles.viewBarFont}>Seguindo</Text>
+                <Text style={styles.viewBarFont}>Seguind</Text>
             </View>
         </View>
     )
@@ -40,10 +47,16 @@ const styles = StyleSheet.create({
     },
     scrollView:{
         flex: 1,
-        backgroundColor: "steelblue"
+        backgroundColor: "#0c0f1d",
     },
     containerCaroussel:{
-        backgroundColor: "#1fff"
+        flex:1,
+        backgroundColor: "#fff",
+        justifyContent:'center',
+        alignContent: 'center',
+        height: "100%",
+        width:"100%"
+
     },
     barraNavegacao:{
         width: "100%",
