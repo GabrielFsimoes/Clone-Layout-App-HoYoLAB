@@ -29,16 +29,16 @@ export const Carrousel = () =>{
               }}>
                 <Image source= {item.image}
                 style={{
-                    resizeMode: 'contain',
+                    resizeMode: 'cover',
                     height: 150,
                     width: 418,
                 }}
                 />
-                {/* <Text  style={{
+                <Text  style={{
                   fontSize: 18
                 }}>
                     {item.text}
-                </Text> */}
+                </Text>
             </View>
         )
     }
