@@ -27,13 +27,17 @@ export const Carrousel = () =>{
             <View  style={{
                 flex:1,
                 backgroundColor:'#0c0f1d',
-                height:180
+                height:170,
+                marginTop:5,
+                alignItems:'center',
+                justifyContent:'center'
               }}>
                 <Image source= {item.image}
                 style={{
-                    resizeMode: 'stretch',
-                    height: 150,
-                    width: 418,
+                    resizeMode: 'cover',
+                    height: 100,
+                    width: "95%",
+                    borderRadius:10
                 }}
                 />
                 <Text  style={{
@@ -42,8 +46,6 @@ export const Carrousel = () =>{
                   position: 'absolute',
                   bottom:30,
                   left:25,
-                  
-
                 }}>
                     {item.text}
                 </Text>
