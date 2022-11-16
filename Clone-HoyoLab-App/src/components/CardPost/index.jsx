@@ -16,7 +16,7 @@ export function CardPost({item}){
         <Text style={styles.descricao}>2h atrás Genshin impact</Text>
         </View>
         </View>
-        <TouchableOpacity onPress={() => handlePress()} >
+        <TouchableOpacity  >
             <Text style={styles.fontBtn}>
                 Seguir
             </Text>
@@ -28,10 +28,24 @@ export function CardPost({item}){
         </View>
         <View style={styles.conteudo}>
          <Image source={{uri: item.imagens }}
-         style={{height: 150,width: 150,
+         style={{resizeMode: 'stretch', height: 170,width: "50%",
             borderRadius: 5
         }}/>
         </View>
+            <View style={styles.postInfo}>
+            <View style={styles.postInfo}>
+            <Image style={styles.postIcons} source={ require('../../assets/eye.png')} />
+            <Text style={styles.descricao}>22 mil</Text>
+            </View>
+            <View style={styles.postInfo}>
+            <Image style={styles.postIcons} source={ require('../../assets/coments.png')} />
+            <Text style={styles.descricao}>22 mil</Text>
+            </View>
+            <View style={styles.postInfo}>
+            <Image style={styles.postIcons} source={ require('../../assets/Like.png')} />
+            <Text style={styles.descricao}>22 mil</Text>
+            </View>
+            </View>
         </View>
     )
 }
@@ -41,8 +55,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#1b1d2a',
         height:"100%",
-        width:"98%",
-        margin:5
+        width:"97%",
+        margin:8,
+        borderRadius:18
     },
     userInfoContainer:{
         flexDirection:'row',
@@ -52,13 +67,14 @@ const styles = StyleSheet.create({
     },
     name:{
         color: '#fff',
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 17,
+        fontWeight: '500',
     },
     titulo:{
         color: '#fff',
         fontSize: 17,
-        fontWeight: 'bold',
+        fontWeight: '600',
+        marginBottom:5
     },
     descricao:{
         color: '#afb0b5',
@@ -76,10 +92,24 @@ const styles = StyleSheet.create({
         textAlign:'center',
     },
     conteudo:{
+        flex:1,
         flexDirection:'row',
-        justifyContent: 'space-evenly',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        padding: 10
+        padding: 10,
+        margin:4
+    },
+    postInfo:{
+        flexDirection:'row',
+        justifyContent:'space-around',
+        alignItems: 'center',
+        padding: 7
+    },
+    postIcons:{
+        width:25,
+        height:25,
+        marginRight:5,
+        alignItems:"center"
     }
 
 });
